@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;700&family=Tangerine:wght@400;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+}
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/forest.jpg);
+    background-size: cover;
+    background-position: center top;
+    opacity: .8;
+}
+h1{
+    font-family: 'Tangerine';
+    font-weight: 700;
+    font-size: 5rem;
+    width: fit-content;
+    padding: .5rem 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color:  #d3b769;
+    text-shadow: 5px 5px 5px #030303;
+}
+.container img{
+    width: 400px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    transform: rotateY(180deg);
+    z-index: 999;
+    transition: .5s;
+}
+.container img:hover{
+    transform: scale(1.1) rotateY(180deg);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.resposta{
+    position: absolute;
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 1rem;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .7;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.resposta h2{
+    font-family: 'Rajdhani';
+    text-align: left;
+    position: relative;
+    color: #d3b769;
+    font-weight: 300;
+    font-size: 1.5rem;
+    top: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.resposta p{
+    font-family: 'Rajdhani';
+    text-align: right;
+    position: relative;
+    color: #d3b769;
+    font-weight: 300;
+    font-size: 1rem;
+    top: 0;
 }
-
-.App-link {
-  color: #61dafb;
+.multiply{
+    margin: 1rem auto;
+    width: 75%;
+    border: 1px solid #000;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.multiply h2{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.multiply ul{
+    margin: 0 auto;
+    width: fit-content;
+}
+.multiply ul li{
+    color: #d3b769;
+    font-family: 'Rajdhani';
+    font-weight: 300;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    list-style-position: inside;
 }
